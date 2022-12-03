@@ -14,6 +14,7 @@ module Subject
 
   def notify_observers
     @observers.each do |observer|
+      # 如果传入的是block，这里就是call方法
       observer.call(self)
     end
   end
@@ -40,9 +41,16 @@ end
 
 fred = Employee.new('Fred', '123 Sesame Street', 100_000)
 
-fred.add_observer do |changed_employee|
+obs = lambda do |changed_employee|
   puts("check for #{changed_employee.name}")
   puts("salary is #{changed_employee.salary}")
 end
+
+fred.add_observer(&obs)
+
+# fred.add_observer do |changed_employee|
+#   puts("check for #{changed_employee.name}")
+#   puts("salary is #{changed_employee.salary}")
+# end
 
 fred.salary = 3000

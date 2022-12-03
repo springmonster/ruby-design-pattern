@@ -1,5 +1,13 @@
 # Design Pattern in Ruby
 
-## Template
+## 3 Template
 
-## Strategy
+## 4 Strategy
+
+## 5 Observer
+
+## 6 Composite
+
+## 7 Iterator
+
+
