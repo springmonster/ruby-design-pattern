@@ -16,4 +16,14 @@
 
 ## 10 proxy
 
+## 11 Decorator
+
+## 12 Singleton
+
+## 13 Factory
+
+## 14 ？
+
+## 15 Interpreter
+
 
