@@ -10,4 +10,8 @@
 
 ## 7 Iterator
 
+## 8 Command
+
+## 9 Adapter
+
 
