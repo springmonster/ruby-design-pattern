@@ -58,5 +58,17 @@ class NumberingWriter < WriterDecorator
   end
 end
 
-writer = NumberingWriter.new(SimpleWriter.new('final.txt'))
+class TimeStampingWriter < WriterDecorator
+  def initialize(writer)
+    super(writer)
+  end
+
+  def write_line(line)
+    @writer.write_line("#{Time.new} : #{line}")
+  end
+end
+
+writer = TimeStampingWriter.new(NumberingWriter.new(SimpleWriter.new('final.txt')))
 writer.write_line('Hello out there')
+writer.write_line('Hello out here')
+writer.write_line('Hello out where')
