@@ -22,7 +22,7 @@
 
 ## 13 Factory
 
-## 14 ？
+## 14 Builder
 
 ## 15 Interpreter
 
